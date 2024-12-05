@@ -1,0 +1,85 @@
+/* General page setup */
+.home-page {
+    height: 100vh;
+    background-image: url('../images/background.jpg'); /* Set your background image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+  }
+  
+  /* Container to hold both left and right sections */
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Left side for animated text */
+  .left-side {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left;
+  }
+  
+  .animated-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .animate-text {
+    animation-name: inherit;
+    animation: both;
+    animation-duration: 10s;
+  }
+  
+  @keyframes slideText {
+    0% {
+      transform: translateX(100%);
+    }
+    50% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Right side for image */
+  .right-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .right-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .content-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .left-side {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    .right-image {
+      width: 80%;
+    }
+  }
+  
